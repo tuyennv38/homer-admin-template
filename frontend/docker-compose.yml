@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  homer:
+    image: homer:test
+    # image: ghcr.io/nctit09/p101-cms-admin-viewer:staging
+    container_name: homer
+    hostname: homer
+    environment:
+      - NODE_ENV=staging
+      - ENV=staging
+    ports:
+      - 8080:80
